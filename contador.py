@@ -1,4 +1,12 @@
-contador = 0
-while contador <= 100000000000000:
+contador = 5
+soma = 0
+while contador >= 0:
     print(contador)
-    contador = contador + 1
+    #acumulador
+    if contador % 2 == 1:
+        soma = soma + contador
+    #contador
+    contador = contador - 1
+    #aqui1
+print("Cai fora...")
+print("A soma total e: ", soma)
