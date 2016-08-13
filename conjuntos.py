@@ -24,6 +24,11 @@ __author__ = 'Walter'
 x = [0,0,0,0,0,0,0,0,0,0]
 y = [0,0,0,0,0,0,0,0,0,0]
 u = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+d = [0,0,0,0,0,0,0,0,0,0]
+s = [0,0,0,0,0,0,0,0,0,0]
+p = [0,0,0,0,0,0,0,0,0,0]
+inter = [0,0,0,0,0,0,0,0,0,0]
+
 for i in range(0,10):
     print("Digite um numero")
     x[i] = int(input())
@@ -50,8 +55,31 @@ for i in range(0,10):
     #print("")
 print("Uniao: ", u)
 
+proxlivre = 0
+for i in range(0,10):
+    achou = False
+    for j in range(0,10):
+        if x[i] == y[j]:
+            achou = True
+            break
+    if achou == False:
+        d[proxlivre] = x[i]
+        proxlivre = proxlivre + 1
+print("Diferenca: ", d)
 
+for i in range(0,10):
+    s[i] = x[i] + y[i]
+print("Soma: ", s)
 
+for i in range(0,10):
+    p[i] = x[i] * y[i]
+print("Produto: ", p)
 
-
-
+proxlivre = 0
+for i in range(0,10):
+    for j in range(0,10):
+        if x[i] == y[j]:
+            inter[proxlivre] = x[i]
+            proxlivre = proxlivre + 1
+            break
+print("Intersecao : ", inter)
