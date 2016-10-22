@@ -32,6 +32,7 @@ print("O armazem ", armdomaior , end=' - ')
 print(" possui a maior qtd de ", omaior)
 
 #Qual o armazem possui menor estoque
+''' Versão da sala de aula
 omenor=0
 armmenor=0
 for lin in range(4):
@@ -45,6 +46,27 @@ for lin in range(4):
                 armmenor = lin
 print("o armazem ", armmenor, end=' ')
 print(' possui a menor qtd de', omenor)
+'''
+
+#Correção do algoritmo
+omenor=0
+armmenor=0
+soma = 0
+for lin in range(4):
+    for col in range(3):
+        soma += dados[lin][col]
+    if lin == 0:
+        omenor = soma
+        armmenor = lin
+    else:
+        if soma < omenor:
+            omenor = soma
+            armmenor = lin
+    soma = 0
+print("o armazem ", armmenor, end=' ')
+print(' possui a menor qtd de', omenor)
+
+
 
 #Qual o custo total de cada produto
 somaprod=0
